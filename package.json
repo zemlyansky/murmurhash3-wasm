@@ -1,0 +1,19 @@
+{
+  "name": "murmurhash3-wasm",
+  "version": "0.0.1",
+  "description": "MurmurHash3 in WebAssembly",
+  "main": "index.js",
+  "scripts": {
+    "build": "wast2js murmur3.wat -o murmur3.wasm.js",
+    "test": "node test.js"
+  },
+  "author": "Anton Zemlyansky (@zemlyansky)",
+  "license": "MIT",
+  "devDependencies": {
+    "wast2js": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zemlyansky/murmurhash3-wasm"
+  }
+}
