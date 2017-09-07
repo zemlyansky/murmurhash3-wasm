@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "wast2js murmur3.wat -o murmur3.wasm.js",
-    "test": "node test.js"
+    "test": "ava test.js --verbose"
   },
   "author": "Anton Zemlyansky (@zemlyansky)",
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.22.0",
     "wast2js": "^1.1.0"
   },
   "repository": {
