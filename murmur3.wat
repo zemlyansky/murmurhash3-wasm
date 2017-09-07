@@ -67,15 +67,6 @@
     ;; rem - remainder (x % 4 ~ x & 00000011 ~ x & 3)
     (set_local $rem (i32.and (get_local $len)(i32.const 3)))
 
-    ;; rem === 3 ?
-    ;; (br_if $bl3 (i32.eq (get_local $rem)(i32.const 3)))
-    ;; rem === 2 ? 
-    ;; (br_if $bl2 (i32.eq (get_local $rem)(i32.const 2)))
-    ;; rem === 1 ?
-    ;; (br_if $bl1 (i32.eq (get_local $rem)(i32.const 1)))
-    ;; rem === 0 ?
-    ;; (br_if $bl0 (i32.eq (get_local $rem)(i32.const 0)))
-
     ;; k ^= (tail[2] << 16)
     (if (i32.eq (get_local $rem)(i32.const 3)) (then
       (set_local $k (i32.xor
